@@ -2,13 +2,18 @@
     "name": "ifce-tiangua/push",
     "description": "Notificações Web Push compartilhadas pelos sistemas do IFCE Campus Tianguá",
     "type": "library",
-    "license": "proprietary",
+    "license": "MIT",
     "authors": [
         {
             "name": "Ronaldo Ribeiro",
-            "email": "ronaldo.ribeiro@ifce.edu.br"
+            "email": "ronaldo.ribeiro@ifce.edu.br",
+            "role": "Manutenção"
         }
     ],
+    "support": {
+        "email": "ronaldo.ribeiro@ifce.edu.br",
+        "issues": "https://github.com/ronaldoifce/push-campus/issues"
+    },
     "require": {
         "php": ">=7.3",
         "ext-json": "*",

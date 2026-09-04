@@ -241,3 +241,12 @@ O SQL de `Assinatura` e `Fila` é MySQL, igual ao de produção, e por isso não
 em banco de mentira: os testes cobrem a validação (que acontece antes de tocar o
 banco) e a coordenação do processamento, com dublês de fila, assinatura e
 transporte.
+
+## Contato
+
+Manutenção: Ronaldo Ribeiro — <ronaldo.ribeiro@ifce.edu.br>
+Dúvidas e problemas: <https://github.com/ronaldoifce/push-campus/issues>
+
+## Licença
+
+MIT — veja [LICENSE](LICENSE).
