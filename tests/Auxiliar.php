@@ -20,7 +20,8 @@ abstract class Auxiliar
             'pdo' => new \PDO('sqlite::memory:'),
             'sistema' => 'teste',
             'vapid_publica' => 'chave-publica-de-teste',
-            'vapid_privada' => 'chave-privada-de-teste'
+            'vapid_privada' => 'chave-privada-de-teste',
+            'vapid_assunto' => 'https://exemplo.invalido'
         ), $extras));
     }
 }

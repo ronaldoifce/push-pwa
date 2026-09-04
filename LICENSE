@@ -1,21 +1,260 @@
-MIT License
+# PolyForm Noncommercial License 1.0.0
 
-Copyright (c) 2026 Ronaldo Ribeiro — Instituto Federal do Ceará, Campus Tianguá
+<https://polyformproject.org/licenses/noncommercial/1.0.0>
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Required Notice: Copyright 2026 Instituto Federal de Educação, Ciência e
+Tecnologia do Ceará (IFCE)
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## Acceptance
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+In order to get any license under these terms, you must agree
+to them as both strict obligations and conditions to all
+your licenses.
+
+## Copyright License
+
+The licensor grants you a copyright license for the
+software to do everything you might do with the software
+that would otherwise infringe the licensor's copyright
+in it for any permitted purpose. However, you may
+only distribute the software according to [Distribution
+License](#distribution-license) and make changes or new works
+based on the software according to [Changes and New Works
+License](#changes-and-new-works-license).
+
+## Distribution License
+
+The licensor grants you an additional copyright license
+to distribute copies of the software. Your license
+to distribute covers distributing the software with
+changes and new works permitted by [Changes and New Works
+License](#changes-and-new-works-license).
+
+## Notices
+
+You must ensure that anyone who gets a copy of any part of
+the software from you also gets a copy of these terms or the
+URL for them above, as well as copies of any plain-text lines
+beginning with `Required Notice:` that the licensor provided
+with the software. For example:
+
+> Required Notice: Copyright 2026 Instituto Federal de Educação, Ciência e
+> Tecnologia do Ceará (IFCE)
+
+## Changes and New Works License
+
+The licensor grants you an additional copyright license to
+make changes and new works based on the software for any
+permitted purpose.
+
+## Patent License
+
+The licensor grants you a patent license for the software that
+covers patent claims the licensor can license, or becomes able
+to license, that you would infringe by using the software.
+
+## Noncommercial Purposes
+
+Any noncommercial purpose is a permitted purpose.
+
+## Personal Uses
+
+Personal use for research, experiment, and testing for
+the benefit of public knowledge, personal study, private
+entertainment, hobby projects, amateur pursuits, or religious
+observance, without any anticipated commercial application,
+is use for a permitted purpose.
+
+## Noncommercial Organizations
+
+Use by any charitable organization, educational institution,
+public research organization, public safety or health
+organization, environmental protection organization,
+or government institution is use for a permitted purpose
+regardless of the source of funding or obligations resulting
+from the funding.
+
+## Fair Use
+
+You may have "fair use" rights for the software under the
+law. These terms do not limit them.
+
+## No Other Rights
+
+These terms do not allow you to sublicense or transfer any of
+your licenses to anyone else, or prevent the licensor from
+granting licenses to anyone else. These terms do not imply
+any other licenses.
+
+## Patent Defense
+
+If you make any written claim that the software infringes or
+contributes to infringement of any patent, your patent license
+for the software granted under these terms ends immediately. If
+your company makes such a claim, your patent license ends
+immediately for work on behalf of your company.
+
+## Violations
+
+The first time you are notified in writing that you have
+violated any of these terms, or done anything with the software
+not covered by your licenses, your licenses can nonetheless
+continue if you come into full compliance with these terms,
+and take practical steps to correct past violations, within
+32 days of receiving notice. Otherwise, all your licenses
+end immediately.
+
+## No Liability
+
+***As far as the law allows, the software comes as is, without
+any warranty or condition, and the licensor will not be liable
+to anyone for any damages related to the software or these
+terms, under any kind of legal claim.***
+
+## Definitions
+
+The **licensor** is the individual or entity offering these
+terms, and the **software** is the software the licensor makes
+available under these terms.
+
+**You** refers to the individual or entity agreeing to these
+terms.
+
+**Your company** is any legal entity, sole proprietorship,
+or other kind of organization that you work for, plus all
+organizations that have control over, are under the control of,
+or are under common control with that organization. **Control**
+means ownership of substantially all the assets of an entity,
+or the power to direct its management and policies by vote,
+contract, or otherwise. Control can be direct or indirect.
+
+**Your licenses** are all the licenses granted to you for the
+software under these terms.
+
+**Use** means anything you do with the software requiring one
+of your licenses.
+
+---------------------------------------------------------------------------
+
+# Licença PolyForm Não Comercial 1.0.0 — tradução de cortesia
+
+Esta tradução existe apenas para facilitar a leitura em português. Ela **não é
+a licença**: em caso de dúvida ou divergência, prevalece o texto em inglês
+acima, que é a versão oficial publicada em
+<https://polyformproject.org/licenses/noncommercial/1.0.0>.
+
+Aviso obrigatório: Copyright 2026 Instituto Federal de Educação, Ciência e
+Tecnologia do Ceará (IFCE)
+
+## Aceitação
+
+Para obter qualquer licença sob estes termos, você precisa concordar com eles,
+tanto como obrigações estritas quanto como condições de todas as suas licenças.
+
+## Licença de direito autoral
+
+O licenciante concede a você uma licença de direito autoral sobre o software
+para fazer tudo o que você poderia fazer com ele e que, de outro modo,
+infringiria o direito autoral do licenciante, desde que para uma finalidade
+permitida. No entanto, você só pode distribuir o software conforme a *Licença de
+distribuição* e fazer modificações ou novas obras baseadas nele conforme a
+*Licença de modificações e novas obras*.
+
+## Licença de distribuição
+
+O licenciante concede a você uma licença adicional de direito autoral para
+distribuir cópias do software. Sua licença de distribuição abrange distribuir o
+software com as modificações e novas obras permitidas pela *Licença de
+modificações e novas obras*.
+
+## Avisos
+
+Você deve garantir que qualquer pessoa que receba de você uma cópia de qualquer
+parte do software receba também uma cópia destes termos ou a URL indicada acima,
+bem como cópias de quaisquer linhas de texto simples iniciadas por
+`Required Notice:` fornecidas pelo licenciante junto com o software.
+
+## Licença de modificações e novas obras
+
+O licenciante concede a você uma licença adicional de direito autoral para fazer
+modificações e novas obras baseadas no software, para qualquer finalidade
+permitida.
+
+## Licença de patente
+
+O licenciante concede a você uma licença de patente sobre o software, abrangendo
+as reivindicações de patente que o licenciante possa licenciar, ou venha a poder
+licenciar, e que seriam infringidas pelo seu uso do software.
+
+## Finalidades não comerciais
+
+Qualquer finalidade não comercial é uma finalidade permitida.
+
+## Usos pessoais
+
+O uso pessoal para pesquisa, experimentação e testes em benefício do
+conhecimento público, estudo pessoal, entretenimento privado, projetos de
+hobby, atividades amadoras ou observância religiosa, sem qualquer aplicação
+comercial prevista, é uso para finalidade permitida.
+
+## Organizações não comerciais
+
+O uso por qualquer organização beneficente, **instituição de ensino**,
+organização pública de pesquisa, organização de segurança ou saúde pública,
+organização de proteção ambiental ou **instituição governamental** é uso para
+finalidade permitida, independentemente da origem do financiamento ou das
+obrigações dele decorrentes.
+
+## Uso justo
+
+Você pode ter direitos de "uso justo" (*fair use*) sobre o software conforme a
+lei. Estes termos não os limitam.
+
+## Nenhum outro direito
+
+Estes termos não permitem que você sublicencie ou transfira qualquer de suas
+licenças a terceiros, nem impedem o licenciante de conceder licenças a
+terceiros. Estes termos não implicam quaisquer outras licenças.
+
+## Defesa de patente
+
+Se você alegar por escrito que o software infringe ou contribui para a violação
+de qualquer patente, sua licença de patente sobre o software concedida por estes
+termos termina imediatamente. Se sua empresa fizer tal alegação, sua licença de
+patente termina imediatamente para trabalhos em nome dela.
+
+## Violações
+
+Na primeira vez em que você for notificado por escrito de que violou algum
+destes termos, ou fez com o software algo não coberto por suas licenças, suas
+licenças ainda assim podem continuar, desde que você passe a cumprir
+integralmente estes termos e adote medidas práticas para corrigir as violações
+passadas em até 32 dias do recebimento da notificação. Caso contrário, todas as
+suas licenças terminam imediatamente.
+
+## Ausência de responsabilidade
+
+***Na máxima extensão permitida pela lei, o software é fornecido no estado em
+que se encontra, sem qualquer garantia ou condição, e o licenciante não será
+responsável perante ninguém por quaisquer danos relacionados ao software ou a
+estes termos, sob qualquer tipo de pretensão jurídica.***
+
+## Definições
+
+O **licenciante** é a pessoa física ou jurídica que oferece estes termos, e o
+**software** é o software que o licenciante disponibiliza sob estes termos.
+
+**Você** se refere à pessoa física ou jurídica que concorda com estes termos.
+
+**Sua empresa** é qualquer pessoa jurídica, empresário individual ou outro tipo
+de organização para a qual você trabalhe, além de todas as organizações que
+controlem, sejam controladas por, ou estejam sob controle comum com essa
+organização. **Controle** significa a titularidade de substancialmente todos os
+ativos de uma entidade, ou o poder de dirigir sua administração e políticas por
+voto, contrato ou de outra forma. O controle pode ser direto ou indireto.
+
+**Suas licenças** são todas as licenças concedidas a você sobre o software sob
+estes termos.
+
+**Uso** significa qualquer coisa que você faça com o software que exija uma de
+suas licenças.

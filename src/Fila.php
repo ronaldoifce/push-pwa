@@ -8,8 +8,8 @@ namespace campus\push;
  *
  * O que liga a notificação ao registro de origem é responsabilidade do sistema:
  * `referencia` serve para um ponteiro solto, e `extras` permite gravar a coluna
- * com chave estrangeira de verdade (`agendamento_codigo` no Agende, `acesso_id`
- * no RA), que é o motivo de cada sistema manter a tabela no seu próprio banco.
+ * com chave estrangeira de verdade para o registro que originou o aviso, que é
+ * o motivo de cada aplicação manter a tabela no seu próprio banco.
  */
 class Fila
 {

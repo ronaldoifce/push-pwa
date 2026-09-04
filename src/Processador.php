@@ -6,8 +6,8 @@ namespace campus\push;
  * Drena a fila: aposenta assinaturas paradas, reserva um lote, confere se cada
  * aviso ainda faz sentido e entrega.
  *
- * A regra de "ainda faz sentido" é do sistema, não do pacote — no Agende é a
- * reserva continuar ativa e no futuro, no RA é a retirada ter acontecido mesmo.
+ * A regra de "ainda faz sentido" é da aplicação, não do pacote: pode ser um
+ * agendamento continuar ativo e no futuro, ou um registro ainda existir.
  * Por isso ela chega como função em `validarCom()`, e não como SQL aqui dentro:
  * é o único ponto de domínio do processamento, e mantê-lo fora é o que permite
  * a mesma fila servir sistemas com esquemas diferentes.

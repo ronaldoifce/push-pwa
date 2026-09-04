@@ -15,11 +15,11 @@ class FilaTest extends TestCase
     private function aviso(array $extras = array())
     {
         return array_merge(array(
-            'chave_unica' => 'lembrete:1',
+            'chave_unica' => 'aviso:1',
             'cpf' => '00000000000',
-            'titulo' => 'Lembrete',
-            'mensagem' => 'Sua reserva começa em breve.',
-            'destino' => '/agende/usuario/meus-agendamentos'
+            'titulo' => 'Aviso',
+            'mensagem' => 'Uma linha curta para a tela de bloqueio.',
+            'destino' => '/app/minha-pagina'
         ), $extras);
     }
 
@@ -45,7 +45,7 @@ class FilaTest extends TestCase
     {
         $this->expectException(\InvalidArgumentException::class);
         $this->fila()->enfileirar($this->aviso(array(
-            'extras' => array('agendamento_codigo = 1; DROP TABLE pessoa --' => 1)
+            'extras' => array('registro_id = 1; DROP TABLE usuario --' => 1)
         )));
     }
 
@@ -72,8 +72,8 @@ class FilaTest extends TestCase
     {
         $resultado = $this->fila()->enfileirar($this->aviso(array(
             'enviar_em' => '2026-09-04 12:00:00',
-            'referencia' => 'agendamento:1',
-            'extras' => array('agendamento_codigo' => 1)
+            'referencia' => 'registro:1',
+            'extras' => array('registro_id' => 1)
         )));
         $this->assertFalse($resultado);
     }

@@ -1,5 +1,5 @@
 /*
- * Cliente de notificações dos sistemas do IFCE Campus Tianguá.
+ * Cliente de notificações Web Push.
  *
  * Cuida só do mecanismo: permissão, assinatura, identidade do aparelho e envio
  * ao servidor. A interface — banner, diálogo, botão — fica com cada sistema,
@@ -7,7 +7,7 @@
  *
  * Uso:
  *   campusPush.iniciar({
- *       base: 'https://sistemas.tiangua.ifce.edu.br/ra/',
+ *       base: 'https://exemplo.org/app/',
  *       chaveVapid: '...',
  *       jaAtivo: true,
  *       registro: function () { return meuRegistroDoServiceWorker(); }
@@ -37,7 +37,7 @@
         config = {
             base: new URL(opcoes.base || './', global.location.href),
             chaveVapid: String(opcoes.chaveVapid || ''),
-            rotaAssinar: opcoes.rotaAssinar || 'services/push/assinar',
+            rotaAssinar: opcoes.rotaAssinar || 'push/assinar',
             jaAtivo: !!opcoes.jaAtivo,
             chaveVerificacao: opcoes.chaveVerificacao || 'campus-push-verificado-em',
             registro: typeof opcoes.registro === 'function' ? opcoes.registro : registroPadrao

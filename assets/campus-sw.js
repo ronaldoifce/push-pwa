@@ -1,11 +1,11 @@
 /*
- * Parte de notificações do service worker, compartilhada pelos sistemas do
- * IFCE Campus Tianguá.
+ * Parte de notificações do service worker, compartilhada pelas aplicações que
+ * instalam o pacote.
  *
  * Não é um service worker inteiro: o cache e o modo offline continuam sendo de
- * cada sistema. Carregue no topo do service worker do sistema:
+ * cada aplicação. Carregue no topo do service worker que ela já tem:
  *
- *   importScripts('/ra/push/campus-sw.js');
+ *   importScripts('/app/push/campus-sw.js');
  *   campusPushSW.configurar({ icone: 'icons/icon-192.png', selo: 'icons/badge-96.png' });
  *
  * O `importScripts` resolve caminho relativo contra o script, não contra o
@@ -15,8 +15,8 @@
     'use strict';
 
     var opcoes = {
-        rotaAssinar: 'services/push/assinar',
-        rotaChave: 'services-publico/push/chave',
+        rotaAssinar: 'push/assinar',
+        rotaChave: 'push/chave',
         icone: '',
         selo: '',
         tagPadrao: 'campus'

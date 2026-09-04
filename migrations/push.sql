@@ -1,16 +1,15 @@
--- Esquema base das notificações push, aplicado no banco de cada sistema.
+-- Esquema base das notificações push, aplicado no banco de cada aplicação.
 --
--- As linhas NÃO são compartilhadas entre sistemas: cada um cria estas tabelas no
--- seu próprio banco, o que preserva as chaves estrangeiras para as tabelas
--- locais (`pessoa`, `agendamento`, `acesso`) e o ON DELETE CASCADE que vem de
--- graça com elas. O que é compartilhado é o código do pacote ifce-tiangua/push.
+-- As linhas NÃO são compartilhadas entre aplicações: cada uma cria estas tabelas
+-- no seu próprio banco, o que preserva as chaves estrangeiras para as tabelas
+-- locais e o ON DELETE CASCADE que vem de graça com elas. O que é compartilhado
+-- é o código do pacote.
 --
--- Depois de aplicar este arquivo, cada sistema acrescenta o que é seu:
+-- Depois de aplicar este arquivo, acrescente o que é da aplicação:
 --   1. a chave estrangeira de `cpf` para a sua tabela de pessoas;
---   2. a coluna que aponta para o registro de origem, com a sua própria FK
---      (`agendamento_codigo` no Agende, `acesso_id` no RA), passada em
---      `Fila::enfileirar()` pelo campo `extras`.
--- Veja exemplos no README do pacote.
+--   2. a coluna que aponta para o registro de origem, com a sua própria chave
+--      estrangeira, passada em Fila::enfileirar() pelo campo `extras`.
+-- Veja exemplos no README.
 
 CREATE TABLE IF NOT EXISTS push_assinatura (
   codigo bigint(20) NOT NULL AUTO_INCREMENT,
@@ -41,7 +40,7 @@ CREATE TABLE IF NOT EXISTS push_notificacao (
   chave_unica varchar(100) NOT NULL,
   cpf varchar(11) NOT NULL,
   -- Ponteiro solto para o registro de origem, usado por cancelarPorReferencia().
-  -- Não substitui a coluna com chave estrangeira que cada sistema acrescenta.
+  -- Não substitui a coluna com chave estrangeira que a aplicação acrescenta.
   referencia varchar(100) NOT NULL DEFAULT '',
   titulo varchar(150) NOT NULL,
   mensagem varchar(255) NOT NULL,

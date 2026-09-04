@@ -36,10 +36,10 @@ class ProcessadorTest extends TestCase
         return array_merge(array(
             'codigo' => 7,
             'cpf' => '00000000000',
-            'titulo' => 'Lanche retirado',
-            'mensagem' => 'Sua retirada foi registrada às 12:03.',
-            'destino' => '/ra/carteira/estudante',
-            'tag' => 'ra-retirada-7'
+            'titulo' => 'Aviso curto',
+            'mensagem' => 'Uma linha para a tela de bloqueio.',
+            'destino' => '/app/minha-pagina',
+            'tag' => 'app-registro-7'
         ), $extras);
     }
 
@@ -115,7 +115,7 @@ class ProcessadorTest extends TestCase
     public function testPayloadNaoLevaCpfNemCamposDoRegistroDeOrigem()
     {
         $this->fila->lote = array($this->item(array(
-            'referencia' => 'acesso:7',
+            'referencia' => 'registro:7',
             'justificativa' => 'texto interno que não pode sair',
             'ultimo_erro' => null
         )));
@@ -126,10 +126,10 @@ class ProcessadorTest extends TestCase
         $payload = json_decode($this->transporte->payloads[0], true);
 
         $this->assertSame(array('title', 'body', 'url', 'tag'), array_keys($payload));
-        $this->assertSame('Lanche retirado', $payload['title']);
+        $this->assertSame('Aviso curto', $payload['title']);
         $this->assertStringNotContainsString('00000000000', $this->transporte->payloads[0]);
         $this->assertStringNotContainsString('justificativa', $this->transporte->payloads[0]);
-        $this->assertStringNotContainsString('acesso:7', $this->transporte->payloads[0]);
+        $this->assertStringNotContainsString('registro:7', $this->transporte->payloads[0]);
     }
 
     public function testHigienizacaoEntraNoResultadoDoProcessamento()

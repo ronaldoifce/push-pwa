@@ -5,8 +5,8 @@ namespace campus\push;
 /**
  * Tudo que muda de um sistema para outro. O restante do pacote não lê variável
  * de ambiente nem constante global: quem instala decide de onde vem cada valor,
- * porque os sistemas do campus configuram de formas diferentes (o Agende usa
- * `.env`, o RA usa `src/settings.php`).
+ * porque cada aplicação que instala o pacote guarda a configuração de um
+ * jeito — arquivo de ambiente, arquivo de settings, banco.
  */
 class Configuracao
 {
@@ -28,7 +28,7 @@ class Configuracao
      */
     public function __construct(array $opcoes)
     {
-        foreach (array('pdo', 'sistema', 'vapid_publica', 'vapid_privada') as $obrigatorio) {
+        foreach (array('pdo', 'sistema', 'vapid_publica', 'vapid_privada', 'vapid_assunto') as $obrigatorio) {
             if (!isset($opcoes[$obrigatorio]) || $opcoes[$obrigatorio] === '') {
                 throw new \InvalidArgumentException('Configuração de push sem "' . $obrigatorio . '".');
             }
@@ -41,9 +41,10 @@ class Configuracao
         $this->sistema = self::validarIdentificador($opcoes['sistema'], 'sistema');
         $this->vapidPublica = trim((string)$opcoes['vapid_publica']);
         $this->vapidPrivada = trim((string)$opcoes['vapid_privada']);
-        $this->vapidAssunto = isset($opcoes['vapid_assunto']) && $opcoes['vapid_assunto'] !== ''
-            ? (string)$opcoes['vapid_assunto']
-            : 'https://sistemas.tiangua.ifce.edu.br';
+        // Sem valor padrão de propósito: o assunto VAPID identifica quem envia
+        // para o serviço de push, e um padrão embutido faria uma instalação
+        // se apresentar como outra.
+        $this->vapidAssunto = (string)$opcoes['vapid_assunto'];
         // Os nomes de tabela entram em SQL por interpolação — não existe
         // placeholder para identificador — então são validados aqui, uma vez.
         $this->tabelaAssinatura = self::validarIdentificador(
