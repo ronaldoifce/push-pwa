@@ -1,9 +1,9 @@
 <?php
 
-namespace campus\push\tests;
+namespace pushpwa\tests;
 
-use campus\push\Cron;
-use campus\push\Processador;
+use pushpwa\Cron;
+use pushpwa\Processador;
 use PHPUnit\Framework\TestCase;
 
 class CronTest extends TestCase
@@ -12,7 +12,7 @@ class CronTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->trava = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'campus_push_teste_' . getmypid() . '.lock';
+        $this->trava = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'push_pwa_teste_' . getmypid() . '.lock';
     }
 
     protected function tearDown(): void

@@ -1,8 +1,8 @@
 <?php
 
-namespace campus\push\tests;
+namespace pushpwa\tests;
 
-use campus\push\Fila;
+use pushpwa\Fila;
 use PHPUnit\Framework\TestCase;
 
 class FilaTest extends TestCase

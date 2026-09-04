@@ -1,8 +1,8 @@
 <?php
 
-namespace campus\push\tests;
+namespace pushpwa\tests;
 
-use campus\push\Processador;
+use pushpwa\Processador;
 use PHPUnit\Framework\TestCase;
 
 class ProcessadorTest extends TestCase

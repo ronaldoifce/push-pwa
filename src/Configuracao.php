@@ -1,6 +1,6 @@
 <?php
 
-namespace campus\push;
+namespace pushpwa;
 
 /**
  * Tudo que muda de um sistema para outro. O restante do pacote não lê variável

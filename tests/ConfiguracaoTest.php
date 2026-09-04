@@ -1,8 +1,8 @@
 <?php
 
-namespace campus\push\tests;
+namespace pushpwa\tests;
 
-use campus\push\Configuracao;
+use pushpwa\Configuracao;
 use PHPUnit\Framework\TestCase;
 
 class ConfiguracaoTest extends TestCase

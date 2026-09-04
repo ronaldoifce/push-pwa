@@ -1,6 +1,6 @@
 <?php
 
-namespace campus\push;
+namespace pushpwa;
 
 use Minishlink\WebPush\Subscription;
 use Minishlink\WebPush\WebPush;

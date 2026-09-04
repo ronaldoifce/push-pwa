@@ -1,19 +1,19 @@
 <?php
 
-namespace campus\push;
+namespace pushpwa;
 
 /**
  * Acesso aos arquivos JavaScript do pacote.
  *
- * O `vendor/` não é servido pela web nos sistemas do campus, então cada sistema
- * publica estes arquivos por uma rota própria em vez de apontar um `<script
- * src>` para dentro de `vendor/`. Isso também evita copiar o JS para dentro de
+ * O `vendor/` normalmente não é servido pela web, então cada aplicação publica
+ * estes arquivos por uma rota própria em vez de apontar um `<script src>` para
+ * dentro de `vendor/`. Isso também evita copiar o JS para dentro de
  * cada projeto, que é justamente o que faria as versões divergirem.
  */
 class Recursos
 {
-    const CLIENTE = 'push-campus.js';
-    const SERVICE_WORKER = 'campus-sw.js';
+    const CLIENTE = 'push-pwa.js';
+    const SERVICE_WORKER = 'push-pwa-sw.js';
 
     /**
      * @return array conteudo, tipo, etag — o suficiente para o sistema montar a

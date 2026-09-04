@@ -6,13 +6,13 @@
  * porque é a parte que muda entre eles.
  *
  * Uso:
- *   campusPush.iniciar({
+ *   pushPwa.iniciar({
  *       base: 'https://exemplo.org/app/',
  *       chaveVapid: '...',
  *       jaAtivo: true,
  *       registro: function () { return meuRegistroDoServiceWorker(); }
  *   });
- *   campusPush.solicitarPermissao().then(function (ok) { ... });
+ *   pushPwa.solicitarPermissao().then(function (ok) { ... });
  */
 (function (global) {
     'use strict';
@@ -22,8 +22,8 @@
     // aparelho fora da higienização — por isso a janela não pode ser longa
     // demais nem a verificação pode ser pulada de vez.
     var INTERVALO_VERIFICACAO_MS = 12 * 60 * 60 * 1000;
-    var CHAVE_DISPOSITIVO = 'campus-push-dispositivo';
-    var CACHE_DISPOSITIVO = 'campus-push';
+    var CHAVE_DISPOSITIVO = 'push-pwa-dispositivo';
+    var CACHE_DISPOSITIVO = 'push-pwa';
     var ARQUIVO_DISPOSITIVO = 'dispositivo';
 
     var config = null;
@@ -39,7 +39,7 @@
             chaveVapid: String(opcoes.chaveVapid || ''),
             rotaAssinar: opcoes.rotaAssinar || 'push/assinar',
             jaAtivo: !!opcoes.jaAtivo,
-            chaveVerificacao: opcoes.chaveVerificacao || 'campus-push-verificado-em',
+            chaveVerificacao: opcoes.chaveVerificacao || 'push-pwa-verificado-em',
             registro: typeof opcoes.registro === 'function' ? opcoes.registro : registroPadrao
         };
         return config;
@@ -149,7 +149,7 @@
             credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json',
-                'X-Campus-PWA': '1'
+                'X-Push-Pwa': '1'
             },
             body: JSON.stringify(dados)
         }).then(function (resposta) {
@@ -213,8 +213,8 @@
     function solicitarPermissao(explicito) {
         if (!suportado()) { return Promise.resolve(false); }
         // Assinatura já ativa no servidor: não chama requestPermission() de novo.
-        // Todos os sistemas do campus ficam na mesma origem, e o pedido do
-        // sistema reaparecia ao alternar entre ícones instalados separadamente.
+        // Quando há mais de um app instalado na mesma origem, o pedido do
+        // sistema reaparecia ao alternar entre os ícones.
         if (config.jaAtivo && !explicito) { return Promise.resolve(true); }
         if (Notification.permission === 'denied') { return Promise.resolve(false); }
 
@@ -226,7 +226,7 @@
         });
     }
 
-    global.campusPush = {
+    global.pushPwa = {
         iniciar: iniciar,
         suportado: suportado,
         permissao: permissao,

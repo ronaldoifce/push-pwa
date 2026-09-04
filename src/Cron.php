@@ -1,6 +1,6 @@
 <?php
 
-namespace campus\push;
+namespace pushpwa;
 
 /**
  * Execução periódica da fila, com trava.
@@ -22,7 +22,7 @@ class Cron
         $config = $processador->configuracao();
         if ($arquivoTrava === null) {
             $arquivoTrava = sys_get_temp_dir() . DIRECTORY_SEPARATOR
-                . 'campus_push_' . $config->sistema() . '.lock';
+                . 'push_pwa_' . $config->sistema() . '.lock';
         }
 
         $trava = @fopen($arquivoTrava, 'c');

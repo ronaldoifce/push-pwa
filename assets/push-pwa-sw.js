@@ -5,8 +5,8 @@
  * Não é um service worker inteiro: o cache e o modo offline continuam sendo de
  * cada aplicação. Carregue no topo do service worker que ela já tem:
  *
- *   importScripts('/app/push/campus-sw.js');
- *   campusPushSW.configurar({ icone: 'icons/icon-192.png', selo: 'icons/badge-96.png' });
+ *   importScripts('/app/push/push-pwa-sw.js');
+ *   pushPwaSW.configurar({ icone: 'icons/icon-192.png', selo: 'icons/badge-96.png' });
  *
  * O `importScripts` resolve caminho relativo contra o script, não contra o
  * escopo, então use caminho absoluto ou monte a URL com self.registration.scope.
@@ -19,10 +19,10 @@
         rotaChave: 'push/chave',
         icone: '',
         selo: '',
-        tagPadrao: 'campus'
+        tagPadrao: 'app'
     };
 
-    var CACHE_DISPOSITIVO = 'campus-push';
+    var CACHE_DISPOSITIVO = 'push-pwa';
     var ARQUIVO_DISPOSITIVO = 'dispositivo';
 
     function configurar(personalizadas) {
@@ -149,7 +149,7 @@
             return fetch(urlDoEscopo(opcoes.rotaAssinar), {
                 method: 'POST',
                 credentials: 'same-origin',
-                headers: { 'Content-Type': 'application/json', 'X-Campus-PWA': '1' },
+                headers: { 'Content-Type': 'application/json', 'X-Push-Pwa': '1' },
                 body: JSON.stringify(dados)
             });
         }).catch(function () {
@@ -157,5 +157,5 @@
         });
     }
 
-    self.campusPushSW = { configurar: configurar, dadosNotificacao: dadosNotificacao };
+    self.pushPwaSW = { configurar: configurar, dadosNotificacao: dadosNotificacao };
 }(self));

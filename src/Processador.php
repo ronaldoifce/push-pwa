@@ -1,6 +1,6 @@
 <?php
 
-namespace campus\push;
+namespace pushpwa;
 
 /**
  * Drena a fila: aposenta assinaturas paradas, reserva um lote, confere se cada

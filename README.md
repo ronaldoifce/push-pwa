@@ -1,4 +1,4 @@
-# push-campus
+# push-pwa
 
 Notificações Web Push para aplicações PHP: assinaturas por aparelho, fila com
 repetição e envio.
@@ -39,13 +39,13 @@ higienização das assinaturas paradas são as redes de segurança.
 ```json
 {
     "repositories": [
-        { "type": "vcs", "url": "https://github.com/ronaldoifce/push-campus.git" }
+        { "type": "vcs", "url": "https://github.com/ronaldoifce/push-pwa.git" }
     ]
 }
 ```
 
 ```bash
-composer require ifce-tiangua/push
+composer require ronaldoifce/push-pwa
 ```
 
 Requer PHP >= 7.3 e traz `minishlink/web-push`.
@@ -76,7 +76,7 @@ A aplicação decide de onde vêm os valores — o pacote não lê variável de
 ambiente nem constante global.
 
 ```php
-use campus\push\Configuracao;
+use pushpwa\Configuracao;
 
 $push = new Configuracao(array(
     'pdo' => $conexao,
@@ -104,7 +104,7 @@ alertas precisa reassinar.
 ## Enfileirar um aviso
 
 ```php
-use campus\push\Fila;
+use pushpwa\Fila;
 
 (new Fila($push))->enfileirar(array(
     'chave_unica' => 'registro:' . $registroId,   // torna o gatilho idempotente
@@ -136,11 +136,11 @@ A aplicação escreve as rotas; o pacote faz o trabalho. O exemplo usa Slim 3, m
 nada aqui depende dele:
 
 ```php
-use campus\push\{Assinatura, Recursos};
+use pushpwa\{Assinatura, Recursos};
 
 // POST /push/assinar — o navegador registra o aparelho (exige sessão)
 $app->post('/push/assinar', function ($request, $response) use ($push) {
-    if ($request->getHeaderLine('X-Campus-PWA') !== '1') {
+    if ($request->getHeaderLine('X-Push-Pwa') !== '1') {
         return $response->withJson(array('erro' => 'Requisição inválida.'), 400);
     }
     try {
@@ -188,15 +188,15 @@ A interface — banner, diálogo, botão — é de cada aplicação. O pacote cu
 mecanismo.
 
 ```html
-<script src="/app/push/push-campus.js"></script>
+<script src="/app/push/push-pwa.js"></script>
 <script>
-    campusPush.iniciar({
+    pushPwa.iniciar({
         base: 'https://exemplo.org/app/',
         chaveVapid: '...',
         jaAtivo: true,
         registro: function () { return navigator.serviceWorker.ready; }
     });
-    campusPush.verificarSeNecessario();
+    pushPwa.verificarSeNecessario();
 </script>
 ```
 
@@ -205,8 +205,8 @@ permissão. Vale a pena quando há mais de um app instalado na mesma origem: o
 navegador às vezes relê `Notification.permission` como não concedida ao alternar
 entre ícones instalados separadamente, e a assinatura salva continua valendo.
 
-Chame `campusPush.solicitarPermissao(true)` no clique da pessoa e
-`campusPush.verificarSeNecessario()` junto com a sincronização da interface.
+Chame `pushPwa.solicitarPermissao(true)` no clique da pessoa e
+`pushPwa.verificarSeNecessario()` junto com a sincronização da interface.
 
 ## Service worker
 
@@ -214,8 +214,8 @@ O cache e o modo offline continuam sendo de cada aplicação. Carregue a parte d
 push no topo do service worker existente:
 
 ```js
-importScripts('/app/push/campus-sw.js');
-campusPushSW.configurar({
+importScripts('/app/push/push-pwa-sw.js');
+pushPwaSW.configurar({
     icone: 'icons/icon-192.png',
     selo: 'icons/badge-96.png',
     tagPadrao: 'app'
@@ -228,7 +228,7 @@ O `selo` precisa ser uma silhueta com fundo transparente: o Android deixa o
 ## Cron
 
 ```php
-use campus\push\{Cron, Processador};
+use pushpwa\{Cron, Processador};
 
 $processador = (new Processador($push))->validarCom(function (array $item) {
     // Da aplicação: o aviso ainda faz sentido? Devolver false o cancela de vez.
@@ -261,7 +261,7 @@ transporte.
 ## Contato
 
 Manutenção: Ronaldo Ribeiro — <ronaldo.ribeiro@ifce.edu.br>
-Dúvidas e problemas: <https://github.com/ronaldoifce/push-campus/issues>
+Dúvidas e problemas: <https://github.com/ronaldoifce/push-pwa/issues>
 
 ## Licença
 

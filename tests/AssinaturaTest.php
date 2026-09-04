@@ -1,8 +1,8 @@
 <?php
 
-namespace campus\push\tests;
+namespace pushpwa\tests;
 
-use campus\push\Assinatura;
+use pushpwa\Assinatura;
 use PHPUnit\Framework\TestCase;
 
 /**

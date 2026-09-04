@@ -1,11 +1,11 @@
 <?php
 
-namespace campus\push\tests;
+namespace pushpwa\tests;
 
-use campus\push\Assinatura;
-use campus\push\Configuracao;
-use campus\push\Fila;
-use campus\push\Transporte;
+use pushpwa\Assinatura;
+use pushpwa\Configuracao;
+use pushpwa\Fila;
+use pushpwa\Transporte;
 
 /**
  * Dublês para testar o processamento sem MySQL. O SQL de Assinatura e Fila é

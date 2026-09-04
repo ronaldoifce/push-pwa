@@ -4,7 +4,7 @@
          colors="true"
          convertDeprecationsToExceptions="true">
     <testsuites>
-        <testsuite name="push-campus">
+        <testsuite name="push-pwa">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

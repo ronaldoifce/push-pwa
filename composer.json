@@ -1,5 +1,5 @@
 {
-    "name": "ifce-tiangua/push",
+    "name": "ronaldoifce/push-pwa",
     "description": "Notificações Web Push para aplicações PHP: assinaturas por aparelho, fila com repetição e envio",
     "type": "library",
     "license": "PolyForm-Noncommercial-1.0.0",
@@ -12,7 +12,7 @@
     ],
     "support": {
         "email": "ronaldo.ribeiro@ifce.edu.br",
-        "issues": "https://github.com/ronaldoifce/push-campus/issues"
+        "issues": "https://github.com/ronaldoifce/push-pwa/issues"
     },
     "require": {
         "php": ">=7.3",
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "campus\\push\\": "src/"
+            "pushpwa\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "campus\\push\\tests\\": "tests/"
+            "pushpwa\\tests\\": "tests/"
         }
     },
     "scripts": {

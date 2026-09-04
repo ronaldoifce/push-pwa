@@ -1,6 +1,6 @@
 <?php
 
-namespace campus\push;
+namespace pushpwa;
 
 /**
  * Fila de notificações de um sistema. Guarda só o que é comum a qualquer aviso

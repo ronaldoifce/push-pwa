@@ -1,6 +1,6 @@
 <?php
 
-namespace campus\push;
+namespace pushpwa;
 
 /**
  * Entrega de fato ao serviço de push. Existe como interface por dois motivos:

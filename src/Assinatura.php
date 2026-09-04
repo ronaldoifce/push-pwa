@@ -1,6 +1,6 @@
 <?php
 
-namespace campus\push;
+namespace pushpwa;
 
 /**
  * Assinaturas de notificação de um sistema. Cada sistema tem a sua própria
@@ -171,9 +171,9 @@ class Assinatura
 
     /**
      * Usado para não pedir a permissão de novo quando a pessoa já tem assinatura
-     * ativa salva. Todos os sistemas do campus ficam na mesma origem, e o
-     * navegador às vezes relê `Notification.permission` como não concedida ao
-     * alternar entre ícones instalados separadamente.
+     * ativa salva. Com mais de um app instalado na mesma origem, o navegador
+     * às vezes relê `Notification.permission` como não concedida ao alternar
+     * entre os ícones.
      */
     public function existeAtiva($cpf)
     {
