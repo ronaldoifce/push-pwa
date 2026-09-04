@@ -1,0 +1,39 @@
+{
+    "name": "ifce-tiangua/push",
+    "description": "Notificações Web Push compartilhadas pelos sistemas do IFCE Campus Tianguá",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Ronaldo Ribeiro",
+            "email": "ronaldo.ribeiro@ifce.edu.br"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "minishlink/web-push": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=8.0 <10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "campus\\push\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "campus\\push\\tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.0"
+        }
+    }
+}
